@@ -43,36 +43,38 @@ export default function RegisterPage() {
 
   return (
     <div className={s.wrap}>
-      <h1>Страница регистрации</h1>
-      <form onSubmit={hundleSubmit} className={s.form} autoComplete="off">
-        <Input
-          onChange={handleChange}
-          name="name"
-          value={name}
-          type="text"
-          label="Name"
-          variant="filled"
-        />
-        <Input
-          name="email"
-          value={email}
-          onChange={handleChange}
-          type="email"
-          label="Email"
-          variant="filled"
-        />
-        <Input
-          value={password}
-          name="password"
-          type="password"
-          onChange={handleChange}
-          label="Password"
-          variant="filled"
-        />
-        <Button disabled={inspectInpusts()} type="submit" variant="contained">
-          Register
-        </Button>
-      </form>
+      <div className={s.container}>
+        <h1 className={s.text}>Registration</h1>
+        <form onSubmit={hundleSubmit} className={s.form} autoComplete="off">
+          <Input
+            onChange={handleChange}
+            name="name"
+            value={name}
+            type="text"
+            label="Name"
+            variant="filled"
+          />
+          <Input
+            name="email"
+            value={email}
+            onChange={handleChange}
+            type="email"
+            label="Email"
+            variant="filled"
+          />
+          <Input
+            value={password}
+            name="password"
+            type="password"
+            onChange={handleChange}
+            label="Password"
+            variant="filled"
+          />
+          <Button disabled={inspectInpusts()} type="submit" variant="contained">
+            Register
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }
