@@ -40,3 +40,8 @@ h6 {
 a.active {
   color: rgba(69, 144, 243, 0.856);
 }
+
+a:hover,
+a:focus {
+  color: rgba(69, 144, 243, 0.856);
+}
