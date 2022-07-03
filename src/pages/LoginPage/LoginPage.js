@@ -39,26 +39,28 @@ export default function LoginPage() {
 
   return (
     <div className={s.wrap}>
-      <h1>Страница логина</h1>
-      <form onSubmit={hundleSubmit} className={s.form} autoComplete="off">
-        <Input
-          type="email"
-          value={email}
-          onChange={handleChange}
-          name="email"
-          label="email"
-        />
-        <Input
-          type="password"
-          value={password}
-          name="password"
-          label="password"
-          onChange={handleChange}
-        />
-        <Button disabled={inspectInpusts()} type="submit" variant="contained">
-          Sign in
-        </Button>
-      </form>
+      <div className={s.container}>
+        <h1 className={s.text}>Log in</h1>
+        <form onSubmit={hundleSubmit} className={s.form} autoComplete="off">
+          <Input
+            type="email"
+            value={email}
+            onChange={handleChange}
+            name="email"
+            label="email"
+          />
+          <Input
+            type="password"
+            value={password}
+            name="password"
+            label="password"
+            onChange={handleChange}
+          />
+          <Button disabled={inspectInpusts()} type="submit" variant="contained">
+            Sign in
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }
