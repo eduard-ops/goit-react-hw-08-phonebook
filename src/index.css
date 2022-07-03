@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 
 body {
   margin: 0;
@@ -16,7 +16,7 @@ code {
 
 ul {
   margin: 0px;
-  padding: 10px;
+  padding: 0px;
 }
 
 p {
@@ -31,4 +31,12 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+.nav-link.active {
+  color: green;
+}
+
+a.active {
+  color: rgba(69, 144, 243, 0.856);
 }
