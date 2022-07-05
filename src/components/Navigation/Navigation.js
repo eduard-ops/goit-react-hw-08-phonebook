@@ -9,15 +9,14 @@ import s from './Navigation.module.css';
 export default function Navigation() {
   const isLoggedIn = useSelector(authSelectors.getIsLooggedIn);
   return (
-    <nav className="navigation">
+    <>
       {isLoggedIn && (
-        <NavLink className={s.link} to="contacts">
-          Contacts
-        </NavLink>
+        <nav>
+          <NavLink className={s.link} to="contacts">
+            Your Contacts
+          </NavLink>
+        </nav>
       )}
-      <NavLink className={s.link} to="/">
-        Home
-      </NavLink>
-    </nav>
+    </>
   );
 }
