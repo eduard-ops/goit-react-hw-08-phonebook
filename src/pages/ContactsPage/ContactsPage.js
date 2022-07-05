@@ -29,7 +29,7 @@ export default function ContactsPage() {
 
   return (
     <div className={s.wrap}>
-      <h1>Your Phonebook</h1>
+      <h1>Phonebook</h1>
       <Form onSubmit={createContact} />
       <Filter value={filter} onChange={setFilter} />
       <Contacts item={filterContacts} />
