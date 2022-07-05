@@ -20,19 +20,15 @@ import { authOperations } from 'redux/auth/auth-operations';
 
 import authSelectors from 'redux/auth/auth-selectors';
 
-import Container from './Container';
+import ContentWrap from './ContentWrap';
 
 import Main from './Main';
-
-import ContentWrap from './ContentWrap/ContentWrap';
 
 import Loader from './Loader';
 
 import AppBar from './AppBar';
 
 import Footer from './Footer';
-
-const HomePage = lazy(() => import('pages/HomePage'));
 
 const RegisterPage = lazy(() => import('pages/RegisterPage'));
 
@@ -52,20 +48,17 @@ export default function App() {
 
   return (
     !isFetchingCurrentUser && (
-      <Container>
+      <>
         <ToastContainer
           position="bottom-right"
           autoClose={1000}
           pauseOnHover={false}
         />
+        <AppBar />
         <ContentWrap>
-          <AppBar />
           <Main>
             <Suspense fallback={<Loader />}>
               <Routes>
-                <Route element={<PublicRoute redirectTo="/" />}>
-                  <Route path="/" element={<HomePage />} />
-                </Route>
                 <Route
                   element={<PublicRoute restricted redirectTo="contacts" />}
                 >
@@ -85,7 +78,7 @@ export default function App() {
           </Main>
         </ContentWrap>
         <Footer />
-      </Container>
+      </>
     )
   );
 }

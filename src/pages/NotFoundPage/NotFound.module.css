@@ -1,4 +1,23 @@
 .wrap {
+  /* display: flex;
+  justify-content: center; */
   display: flex;
+  align-items: center;
   justify-content: center;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.image {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .image {
+    width: 100%;
+  }
 }
