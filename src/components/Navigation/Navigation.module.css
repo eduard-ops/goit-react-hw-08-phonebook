@@ -1,8 +1,5 @@
 .link {
   text-decoration: none;
   color: black;
-}
-
-.link:not(:last-child) {
   margin-right: 8px;
 }
