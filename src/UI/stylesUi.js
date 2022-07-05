@@ -47,6 +47,7 @@ export const Input = styled(TextField)({
 
 export const ButtonCss = styled(Button)({
   '&.MuiButton-root': {
+    borderRadius: '10px',
     padding: '0px',
     textTransform: 'none',
     marginLeft: '10px',
