@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { lazy } from 'react';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { PrivateRoute } from '../routes/PrivateRoute';
 
@@ -59,6 +59,7 @@ export default function App() {
           <Main>
             <Suspense fallback={<Loader />}>
               <Routes>
+                <Route path="/" element={<Navigate to="login" />}></Route>
                 <Route
                   element={<PublicRoute restricted redirectTo="contacts" />}
                 >
