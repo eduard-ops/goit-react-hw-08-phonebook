@@ -7,7 +7,6 @@ const axiosBaseQuery =
   async ({ url, method, data, params }) => {
     try {
       const result = await axios({ url: baseUrl + url, method, data, params });
-      console.log(result);
       return { data: result.data };
     } catch (axiosError) {
       let err = axiosError;
