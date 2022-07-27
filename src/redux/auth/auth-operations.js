@@ -35,6 +35,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     return data;
   } catch (error) {
     toast.error('Wrong login or password ❗', { theme: 'colored' });
+    return error.rejectWithValue();
   }
 });
 
